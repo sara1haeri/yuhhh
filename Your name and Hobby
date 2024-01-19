@@ -1,0 +1,4 @@
+function start(){
+    println("My name is Sara");
+    println("I like art");
+}
