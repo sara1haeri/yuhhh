@@ -1,0 +1,9 @@
+function start(){
+	var daySegment = "morning";
+	var timeOfDay = 7;
+		
+
+	println("In the " + daySegment + ", I wake up at " + timeOfDay);
+	println("In the afternoon, I eat lunch at 12");
+	println("In the evening, I go to bed at 11");
+}
