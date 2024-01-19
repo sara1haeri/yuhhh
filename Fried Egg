@@ -1,0 +1,99 @@
+var PAN_RADIUS = getWidth()/3;
+var HANDLE_WIDTH = getWidth()/2;
+var HANDLE_HEIGHT = HANDLE_WIDTH/4;
+var PAN_COLOR = Color.GRAY;
+
+var PAN_BOTTOM_RADIUS = PAN_RADIUS-20;
+var PAN_BOTTOM_COLOR = Color.BLACK;
+
+var EGG_RADIUS = PAN_BOTTOM_RADIUS/4;
+var EGG_WHITE_COLOR = Color.WHITE;
+var EGG_YOLK_COLOR = Color.YELLOW; 
+
+var HIGHLIGHT_RADIUS = EGG_RADIUS/4;
+var HIGHLIGHT_COLOR = Color.WHITE;
+
+
+function start() {
+    var pan = new Circle(PAN_RADIUS);
+    var a = getWidth()/2;
+    var b = getHeight()/2;
+    pan.setPosition(a, b);
+    pan.setColor(Color.gray);
+    add(pan);
+    
+    var handle = new Rectangle(HANDLE_WIDTH, HANDLE_HEIGHT);
+    var c = getWidth()/2;
+    var d = getHeight()/2;
+    handle.setPosition(c, d);
+    handle.setColor(Color.gray);
+    add(handle);
+    
+    var bottom = new Circle(PAN_BOTTOM_RADIUS);
+    bottom.setPosition(a, b);
+    bottom.setColor(Color.black);
+    add(bottom);
+    
+    var egg1 = new Circle(EGG_RADIUS);
+    var e = getWidth()/2 - EGG_RADIUS;
+    var f = getHeight()/2 + EGG_RADIUS;
+    egg1.setPosition(e, f);
+    egg1.setColor(Color.white);
+    add(egg1);
+    
+    var egg2 = new Circle(EGG_RADIUS);
+    var g = getWidth()/2 + EGG_RADIUS;
+    var h = getHeight()/2 - EGG_RADIUS;
+    egg2.setPosition(g, h);
+    egg2.setColor(Color.white);
+    add(egg2);
+    
+    var egg3 = new Circle(EGG_RADIUS);
+    var i = getWidth()/2 + EGG_RADIUS;
+    var j = getHeight()/2 + EGG_RADIUS;
+    egg3.setPosition(i, j);
+    egg3.setColor(Color.white);
+    add(egg3);
+    
+    var egg4 = new Circle(EGG_RADIUS);
+    var k = getWidth()/2 - EGG_RADIUS;
+    var l = getHeight()/2 - EGG_RADIUS;
+    egg4.setPosition(k, l);
+    egg4.setColor(Color.white);
+    add(egg4);
+    
+    var egg5 = new Circle(EGG_RADIUS);
+    var m = getWidth()/2;
+    var n = getHeight()/2;
+    egg5.setPosition(m, n);
+    egg5.setColor(Color.white);
+    add(egg5);
+    
+    var egg6 = new Circle(EGG_RADIUS);
+    var o = getWidth()/2 - EGG_RADIUS*2;
+    var p = getHeight()/2;
+    egg6.setPosition(o, p);
+    egg6.setColor(Color.white);
+    add(egg6);
+    
+    var egg7 = new Circle(EGG_RADIUS);
+    var q = getWidth()/2 + EGG_RADIUS;
+    var r = getHeight()/2;
+    egg7.setPosition(q, r);
+    egg7.setColor(Color.white);
+    add(egg7);
+    
+    var yolk = new Circle(EGG_RADIUS);
+    var s = getWidth()/2;
+    var t = getHeight()/2;
+    yolk.setPosition(s, t);
+    yolk.setColor(Color.yellow);
+    add(yolk);
+    
+    var highlight = new Circle(HIGHLIGHT_RADIUS);
+    var u = getWidth()/2;
+    var v = getHeight()/2 - HIGHLIGHT_RADIUS;
+    highlight.setPosition(u, v);
+    highlight.setColor(Color.white);
+    add(highlight);
+}
