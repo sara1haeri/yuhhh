@@ -1,0 +1,8 @@
+function start(){
+    for(var i = 0; i < 5; i++){
+        var circle = new Circle(Randomizer.nextInt(25, 100));
+        circle.setPosition(Randomizer.nextInt(100, 400), Randomizer.nextInt(100, 500));
+        circle.setColor(Randomizer.nextColor());
+        add(circle);
+    }
+}
