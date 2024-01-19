@@ -1,0 +1,29 @@
+collectCoins();
+move();
+collectCoins();
+move();
+collectCoins();
+move();
+collectCoins();
+
+
+function collectCoins() {
+    move();
+    turnLeft();
+    move();
+    move();
+    move();
+    takeBall();
+    takeBall();
+    takeBall();
+    turnaround();
+    move();
+    move();
+    move();
+    turnLeft();
+    
+}
+function turnaround() {
+    turnLeft();
+    turnLeft();
+}
