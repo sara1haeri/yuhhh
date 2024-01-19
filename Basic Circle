@@ -1,0 +1,9 @@
+//Center circle in the center of the canvas.
+//The radius should be set to 100.
+
+function start(){
+    var circle = new Circle(100);
+    circle.setPosition(200,230);
+    circle.setColor(Color.black);
+    add(circle);
+}
