@@ -1,0 +1,4 @@
+function start(){
+var rand_num = Randomizer.nextInt(1,50);
+println(rand_num);
+}
