@@ -1,0 +1,63 @@
+function start() {
+    moveLeft();
+    moveRight();
+    moveLeft();
+    moveRight();
+    move();
+    turnLeft();
+    movee();
+    movveLeft();
+    moveRight();
+    moveLeft();
+    moveRight();
+    moveRight();
+    moveLeft();
+    moveRight();
+    move();
+    moveLeft();
+    moveRight();
+    moveRight();
+    moveLeft();
+    moveRight();
+    moveRight();
+    turnLeft();
+    movee();
+    movveLeft();
+    moveRight();
+    moveLeft();
+    movveLeft();
+    moveLeft();
+    moveRight();
+    moveRight();
+    movveLeft();
+    moveRight();
+    moveLeft();
+    takeBall();
+    turnRight();
+}
+function turnRight() {
+     turnLeft();
+     turnLeft();
+     turnLeft();
+}
+ function movee() {
+     move();
+     move();
+     move();
+ }
+ function moveRight() {
+     turnRight();
+     move();
+ }
+ function movve() {
+     move();
+     move();
+ }
+ function moveLeft() {
+     turnLeft();
+     move();
+ }
+ function movveLeft() {
+     turnLeft();
+     movve();
+ }
