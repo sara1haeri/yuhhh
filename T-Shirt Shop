@@ -1,0 +1,7 @@
+var SHIRT_PRICE = 15;
+
+function start(){
+	var question = readInt("How many t-shirts would you like to buy? ");
+	var total = (SHIRT_PRICE * question);
+	println("The total price will be $" + total);
+}
