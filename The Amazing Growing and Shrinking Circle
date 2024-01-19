@@ -1,0 +1,12 @@
+function start(){
+    var num = Randomizer.nextInt(1, 300);
+    
+    var circle = new Circle(num);
+    var x = getWidth() / 2;
+    var y = getHeight() / 2;
+    circle.setPosition(x, y)
+    circle.setColor(Color.black);
+    add(circle)
+    
+    
+}
