@@ -1,0 +1,5 @@
+function start(){
+	var name = readLine("What is your name? ");
+	var people = readInt("How many people will be coming to dinner? ");
+	println("Hi " + name + ", you are all set for " + people + " people");
+}
