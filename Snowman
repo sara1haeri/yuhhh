@@ -1,0 +1,53 @@
+/* Constants representing the radius of the top, middle,
+ * and bottom snowball. */
+var BOTTOM_RADIUS = 90;
+var MID_RADIUS = 55;
+var TOP_RADIUS = 35;
+
+function start(){
+    //Body
+    var circle1 = new Circle(BOTTOM_RADIUS);
+    circle1.setPosition(getWidth()/2, getHeight()-BOTTOM_RADIUS);
+    circle1.setColor(Color.gray);
+    add(circle1);
+    
+    var circle2 = new Circle(MID_RADIUS);
+    var x = getWidth() / 2;
+    var y = getHeight() - BOTTOM_RADIUS*2 - MID_RADIUS;
+    circle2.setPosition(x, y);
+    circle2.setColor(Color.gray);
+    add(circle2);
+    
+    var circle3 = new Circle(TOP_RADIUS);
+    circle3.setPosition(getWidth()/2, getHeight() - BOTTOM_RADIUS*2 - MID_RADIUS*2 - TOP_RADIUS);
+    circle3.setColor(Color.gray);
+    add(circle3);
+
+    //Hat
+    var rect1 = new Rectangle(50, 50);
+    rect1.setPosition(175,70);
+    rect1.setColor(Color.black);
+    add(rect1);
+    
+    var rect2 = new Rectangle(70, 10);
+    rect2.setPosition(165, 120);
+    rect2.setColor(Color.black);
+    add(rect2);
+
+    //Eyes
+    var circle4 = new Circle(2);
+    circle4.setPosition(215,150);
+    circle4.setColor(Color.black);
+    add(circle4);
+    
+    var circle5 = new Circle(2);
+    circle5.setPosition(190,150);
+    circle5.setColor(Color.black);
+    add(circle5);
+
+    //Nose
+    var circle6 = new Circle(4);
+    circle6.setPosition(205,160);
+    circle6.setColor(Color.orange);
+    add(circle6);
+}
