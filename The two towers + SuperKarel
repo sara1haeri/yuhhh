@@ -1,0 +1,40 @@
+/*This program has karel build two towers, jump down, and end facing east
+*/
+function start(){
+    //Karel builds two towers and jumps down in this program
+    move();
+    makeTower();
+    turnRight();
+    move();
+    jumpDown();
+    move();
+    move();
+    makeTower();
+    turnRight();
+}
+
+function makeTower() {
+    /* 
+    * Precondition: Karel is standing before a tower facing east
+    * Postcondition: Karel is standing on top of a tower made of 3 balls and facing north
+    */
+    putBall();
+    turnLeft();
+    move();
+    putBall();
+    move();
+    putBall();
+    move();
+}
+
+function jumpDown() {
+    /*
+    * Precondition: Karel is standing at the top of a tower facing east
+    * Postcondition: Karel is at the bottom of the tower facing east
+    */
+    turnRight();
+    move();
+    move();
+    move();
+    turnLeft();
+}
