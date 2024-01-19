@@ -1,0 +1,6 @@
+function start(){
+    var rect = new Rectangle(100,100);
+    rect.setPosition(150,200);
+    rect.setColor(Color.orange);
+    add(rect);
+}
