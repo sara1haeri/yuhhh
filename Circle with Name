@@ -1,0 +1,14 @@
+function start(){
+    var circle = new Circle(150);
+    var centerX = getWidth() / 2;
+    var centerY = getHeight() / 2;
+    circle.setPosition(centerX, centerY);
+    circle.setColor(Color.purple);
+    add(circle);
+    
+    var name = new Text("sara");
+    name.setFont("30pt helvetica");
+    name.setColor(Color.white);
+    name.setPosition(centerX - name.getWidth()/2, centerY + name.getHeight()/2);
+    add(name);
+}
