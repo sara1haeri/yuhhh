@@ -1,0 +1,82 @@
+// Constants for main ghost body
+var HEAD_RADIUS = 70;
+var BODY_WIDTH = HEAD_RADIUS * 2;
+var BODY_HEIGHT = 120;
+var NUM_FEET = 3;
+var FOOT_RADIUS = (BODY_WIDTH) / (NUM_FEET * 2);
+var BODY_COLOR = Color.red;
+
+// Constants for eyes
+var PUPIL_RADIUS = 8;
+var PUPIL_LEFT_OFFSET = 16;
+var PUPIL_RIGHT_OFFSET = 40;
+var EYE_RADIUS = 20;
+var EYE_OFFSET = 28;
+var EYE_COLOR = Color.white;
+var PUPIL_COLOR = Color.blue;
+
+/* This program draws a ghost on the canvas. */
+function start(){
+    var head = new Circle(HEAD_RADIUS);
+    var x = getWidth()/2;
+    var y = getHeight()/2
+    head.setPosition(x, y);
+    head.setColor(Color.red);
+    add(head);
+    
+    var body = new Rectangle(BODY_WIDTH, BODY_HEIGHT);
+    var a = getWidth()/2 - HEAD_RADIUS;
+    var b = getHeight()/2;
+    body.setPosition(a, b);
+    body.setColor(Color.red);
+    add(body);
+    
+    var feet = new Circle(FOOT_RADIUS)
+    var c = getWidth()/2;
+    var d = getHeight() - BODY_HEIGHT;
+    feet.setPosition(c, d);
+    feet.setColor(Color.red);
+    add(feet);
+    
+    var foot2 = new Circle(FOOT_RADIUS);
+    var m = getWidth()/2 - FOOT_RADIUS*2;
+    var n = getHeight() - BODY_HEIGHT ;
+    foot2.setPosition(m, n);
+    foot2.setColor(Color.red);
+    add(foot2);
+    
+    var foot3 = new Circle(FOOT_RADIUS);
+    var o = getWidth()/2 + FOOT_RADIUS*2
+    var p = getHeight() - BODY_HEIGHT;
+    foot3.setPosition(o, p);
+    foot3.setColor(Color.red);
+    add(foot3);
+    
+    var eye1 = new Circle(EYE_RADIUS);
+    var e = getWidth()/2 - 28;
+    var f = getHeight()/2;
+    eye1.setPosition(e, f);
+    eye1.setColor(Color.white);
+    add(eye1);
+    
+    var eye2 = new Circle(EYE_RADIUS);
+    var g = getWidth()/2 + 28;
+    var h = getHeight()/2;
+    eye2.setPosition(g, h);
+    eye2.setColor(Color.white);
+    add(eye2);
+    
+    var pupil1 = new Circle(PUPIL_RADIUS);
+    var i = getWidth()/2 - 16;
+    var j = getHeight()/2;
+    pupil1.setPosition(i, j);
+    pupil1.setColor(Color.blue);
+    add(pupil1);
+    
+    var pupil2 = new Circle(PUPIL_RADIUS);
+    var k = getWidth()/2 + 40;
+    var l = getHeight()/2;
+    pupil2.setPosition(k, j);
+    pupil2.setColor(Color.blue);
+    add(pupil2);
+}
