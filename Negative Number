@@ -1,0 +1,5 @@
+function start(){
+	var number = readFloat("Enter a negative decimal number: ");
+	var negative = number < 0;
+	println("Is the value negative? " + negative);
+}
