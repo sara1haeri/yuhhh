@@ -1,0 +1,6 @@
+function start(){
+    var courseCredits = readBoolean("Do you have enough course credits? ");
+    var requirements = readBoolean("Have you met all of your graduation requirements? ");
+    var canGraduate = courseCredits && requirements;
+    println("Can you graduate?: " + canGraduate);
+}
