@@ -1,0 +1,27 @@
+function start(){
+    move();
+    double();
+}
+
+//* Has Karel pick up one ball, turn around, 
+//* move back, then place down two balls *//
+function double(){
+    while(ballsPresent()){
+        takeBall();
+        turnAround();
+        move();
+        putTwoBalls();
+        turnAround();
+        moveForward();
+    }
+}
+
+//* With this function, Karel places two balls down *//
+function putTwoBalls(){
+    putBall();
+    putBall();
+}
+
+function moveForward(){
+    move();
+}
