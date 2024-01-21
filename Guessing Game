@@ -1,0 +1,28 @@
+/* This program will play a simple guessing game.
+ * The user will guess, and the computer should print if
+ * the guess was too high, too low, or correct.
+ * If the user enters '-1', the game should exit.
+ */
+
+var S = -1
+function start() {
+    println("This program plays a guessing game. ");
+    println("The computer is thinking of a value between 0 and 100. ");
+    println("Type '-1' to exit the program. ");
+    var number = Randomizer.nextInt(1,100);
+    while(true){
+        var guess = readInt("What is your guess? ");
+        if(guess == S){
+            break;
+        }
+        if(guess == number){
+            println("Correct!");
+            break;
+        }else if(guess < number){
+            println("Your guess was too low. ");
+        }else if(guess > number){
+            println("Your guess was too high. ");
+        }
+    }
+    println("Game has concluded. ");
+}
