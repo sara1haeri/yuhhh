@@ -1,0 +1,21 @@
+function start() {
+    println("Thank you for calling Dr.Tooth's office! Please listen to the following options:");
+    println("To book an appointment, please press 1. ");
+    println("To cancel an appointement, please press 2. ");
+    println("For our office hours, please press 3. ");
+    println("If you are calling about a delivery, please press 4.");
+    println("Please press any other number to speak to a receptionist. ");
+
+    var option = readInt("Which option will you choose? ");
+    if(option == "1"){
+        println("Your appointment has been booked. Thank you for using Dr. Tooth's phone line!");
+    } else if(option == "2"){
+        println("Your appointment has been cancelled. Thank you for using Dr. Tooth's phone line!");
+    } else if(option == "3"){
+        println("Our office hours are from 8am-6pm. Thank you for using Dr. Tooth's phone line!");
+    } else if(option == "4"){
+        println("We will contact you personally about delivery details. Thank you for using Dr. Tooth's phone line!");
+    } else {
+        println("You will shortly be connected to one of our staff. Thank you for using Dr. Tooth's phone line!");
+    }
+}
