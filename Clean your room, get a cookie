@@ -1,0 +1,8 @@
+function start(){
+    var room = readLine("Did you clean your room? ");
+    if(room == "yes"){
+        println("You get a cookie. ");
+    }else{
+        println("You do not get a cookie until you clean your room. ");
+    }
+}
