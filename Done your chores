@@ -1,0 +1,6 @@
+function start(){
+    var room = readBoolean("Did you clean your room? ");
+    var dishes = readBoolean("Did you do the dishes? ");
+    var allowedOut = room || dishes;
+    println("You are allowed out with your friends: " + allowedOut);
+}
