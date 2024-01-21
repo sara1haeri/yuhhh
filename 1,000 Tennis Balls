@@ -1,0 +1,55 @@
+function start(){
+    if(leftIsClear()){
+        turnLeft();
+        while(ballsPresent()){
+            move();
+        }
+    }
+    for(var i = 0; i <9; i++){
+        completeRow();
+        turnAround();
+        startingPosition();
+        if(frontIsBlocked()){
+            turnLeft();
+            move();
+            turnLeft();
+        }
+    }  
+    completeRow();
+    turnAround();
+    startingPosition();
+    turnRight();
+    while(frontIsClear()){
+        move();
+    }
+    if(facingWest()){
+        turnAround();
+    }
+}
+
+//* Has Karel put down 10 balls 
+//* on the spot *//
+function putTenBalls(){
+    for(var i = 0; i <10; i++){
+        putBall();
+    }
+}
+
+//* Karel moves up the row and places 
+//* 10 balls on every space *//
+function completeRow(){
+    if(noBallsPresent()){
+        for(var i = 0; i <10; i++){
+            putTenBalls();
+            if(frontIsClear()){
+                move();
+            }
+        }
+    }   
+}
+
+function startingPosition(){
+    while(frontIsClear()){
+        move();
+    }
+}
