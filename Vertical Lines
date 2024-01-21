@@ -1,0 +1,8 @@
+function start() {
+    verticalLine(100, 0)
+}
+function verticalLine(x, y){
+    var line = new Line(x, 0, x, y);
+    line.setColor(Color.black);
+    add(line);
+}
