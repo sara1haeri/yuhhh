@@ -1,0 +1,22 @@
+function start(){
+    var circle;
+    var count = 0;
+    var radius = 200;
+    
+    
+    for(var i = count; i < 5; i++){
+        var circle = new Circle(radius);
+        circle.setPosition(getWidth()/2, getHeight()/2);
+        circle.setColor(Color.red);
+        add(circle);
+        
+        var radius = radius - 20;
+        
+        var circle = new Circle(radius);
+        circle.setPosition(getWidth()/2, getHeight()/2);
+        circle.setColor(Color.black);
+        add(circle);
+        
+        var radius = radius - 20;
+    }
+}
