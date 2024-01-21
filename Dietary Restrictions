@@ -1,0 +1,12 @@
+function start(){
+	var order = readLine("Any dietary restrictions?: ");
+	if(order == "vegetarian"){
+	    println("Veggie burger");
+	}
+	if(order == "lactose intolerant"){
+	    println("no cheese");
+	}
+	if(order == "none"){
+	    println("No alterations");
+	}
+}
