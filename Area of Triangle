@@ -1,0 +1,7 @@
+function start(){
+    printTriArea(5, 4);
+}
+function printTriArea (x, y){
+    var area = x*y/2;
+    println(area);
+}
