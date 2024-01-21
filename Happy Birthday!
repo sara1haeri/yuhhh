@@ -1,0 +1,41 @@
+var CIRCLES = 12
+var RADIUS = getWidth()/CIRCLES/2
+function start(){
+    var numCandles = readInt("How old are you turning? ");
+    var cake = new Rectangle(300, 200);
+    cake.setPosition(50, 200);
+    cake.setColor(Color.orange);
+    add(cake);
+   
+    var stand = new Rectangle (350, 40);
+    stand.setPosition(30, 400);
+    stand.setColor(Color.blue);
+    add(stand);
+    
+    var x_pos = getWidth()/2 - numCandles/2*20;
+    for(var i = 0; i < numCandles; i++){
+        var candles = new Rectangle (10, 80)
+        candles.setPosition(x_pos, getHeight()-RADIUS*21);
+        candles.setColor(Color.red);
+        add(candles);
+        
+        x_pos += 20
+    }
+    for(var i = 0; i < CIRCLES; i++){
+        var decor = new Circle(RADIUS);
+        decor.setPosition(RADIUS + RADIUS *2 *i, getHeight()-RADIUS-RADIUS-RADIUS-RADIUS*2);
+        decor.setColor(Color.purple);
+        add(decor);
+    }
+    for(var i = 0; i < CIRCLES - 2; i++){
+        var decor = new Circle(RADIUS);
+        decor.setPosition(RADIUS + RADIUS + RADIUS + RADIUS*2 *i, getHeight()/2-RADIUS-RADIUS);
+        decor.setColor(Color.purple);
+        add(decor);
+    }
+    var text = new Text ('Happy Birthday!');
+    text.setPosition(RADIUS*6, getHeight()-RADIUS*10);
+    text.setColor(Color.red);
+    add(text);
+    
+}
