@@ -1,0 +1,20 @@
+function start(){
+    var number = readInt("Please enter a number from 1-7: ");
+    if(number == "1"){
+        println("This is a Monday");
+    } else if(number == "2"){
+        println("This is a Tuesday");
+    } else if (number == "3"){
+        println("This is a Wednesday");
+    } else if (number == "4"){
+        println("This is a Thursday");
+    } else if (number == "5"){
+        println("This is a Friday");
+    } else if (number == "6"){
+        println("This is a Saturday");
+    } else if (number == "7"){
+        println("This is a Sunday");
+    } else {
+        println("That is not a valid input.")
+    }
+}
