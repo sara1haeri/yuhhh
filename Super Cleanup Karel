@@ -1,0 +1,74 @@
+function start() {
+    turnRight();
+    if(ballsPresent()){
+        takeBall();
+    }
+    while(frontIsClear()){
+        move();
+        if(ballsPresent()){
+            takeBall();
+        }
+    }
+    if (frontIsBlocked()){
+        turnLeft();
+    }
+    cleanRow();
+    turnRight();
+    turnRight();
+    startingPosition();
+    turnRight();
+    turnRight();
+    for(var i = 0; i <24; i++){
+        if(leftIsBlocked()){
+            turnRight();
+            turnRight();
+            turnRight();
+            turnRight();
+        } else {
+            turnLeft();
+            move();
+            turnRight();
+            freshStart();
+        }
+    }
+    if(facingSouth()){
+        turnLeft();
+    }
+    if(facingWest()){
+        turnAround();
+    }
+    if(facingNorth()){
+        turnRight();
+    }
+}
+//* This function goes down a row and cleans 
+//* every ball that is present *//
+function cleanRow(){
+    while(frontIsClear()){
+	    if(ballsPresent()){
+	        takeBall();
+	     }
+	       move();
+	       if(frontIsBlocked()){
+	           if(ballsPresent()){
+	               takeBall();
+	           }
+	       }
+    }
+}
+//* This function returns Karel to starting
+//* position (1, y) *//
+function startingPosition(){
+    while(frontIsClear()){
+        move();
+    }
+}
+//* This function cleans all the balls on a row, 
+//* then returns to starting position and gets 
+//* ready to do next row *//
+function freshStart(){
+    cleanRow();
+    turnAround();
+    startingPosition();
+    turnAround();
+}
