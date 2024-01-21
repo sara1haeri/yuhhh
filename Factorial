@@ -1,0 +1,8 @@
+var N = readInt("Enter a starting value for the factorial: ");
+function start(){
+    var product = 1;
+	for(var i = 2; i <=N; i++){
+	    product *= i
+	}
+	println(N + "! = " + product)
+}
