@@ -1,0 +1,11 @@
+function start(){
+	var first = readInt("Type in first number: ");
+	var last = readInt("Type in last number: ");
+	var sum = 0;
+	
+	for(var i = first; i <= last; i++){
+	    sum+=i;
+	}
+	
+	println("The result is: " + sum);
+}
