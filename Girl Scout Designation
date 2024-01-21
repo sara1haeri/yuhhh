@@ -1,0 +1,7 @@
+function start(){
+	var boxes = readInt("How many boxes did you sell? ");
+	var badges = readInt("How many badges do you have? ");
+	var hours = readInt("How many hours have you volunteered?? ");
+	var gold = boxes >= 100 || boxes >= 50 && badges >= 10 && hours >= 25;
+	println("Is gold status? " + gold);
+}
