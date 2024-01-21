@@ -1,0 +1,23 @@
+var POOL_BALL_RADIUS = 40;
+var POOL_BALL_FONT = "30pt Arial";
+
+function start(){
+	drawBall(Color.orange, 5, 100, 100);
+	drawBall(Color.green, 6, 50, 200);
+	drawBall(Color.red, 3, 150, 350);
+	drawBall(Color.blue, 2, 250, 140);
+
+	// Add some more pool balls!
+}
+
+
+function drawBall(color, num, x, y){
+	var ball = new Circle(POOL_BALL_RADIUS);
+	ball.setPosition(x, y);
+	ball.setColor(color);
+	add(ball);
+	var text = new Text(POOL_BALL_FONT);
+	text.setText(num);
+	text.setColor(Color.white);
+	add(text);
+}
