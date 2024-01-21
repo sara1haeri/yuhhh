@@ -1,0 +1,17 @@
+/* This program should draw the Netherlands flag. The
+ * top third of the canvas is red, the middle third
+ * is white, and the bottom third is blue. */
+
+var height = 40;
+var width = 40; 
+var x_pos = 100; 
+var y_pos = 50; 
+
+function start(){
+    for(var i = 0; i <3; i++){
+    	var square = new Rectangle(height, width);
+    	square.setPosition(x_pos, y_pos*(i+1));
+    	square.setColor(Color.black);
+    	add(square)
+    }
+}
