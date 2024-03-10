@@ -1,0 +1,58 @@
+var blueCircle;
+var redCircle;
+var RADIUS = 25;
+var DX_RED = 6;
+var DX_BLUE = 4;
+var DELAY = 40;
+var stop = true;
+var touch = false;
+var blueCircle = new Circle(RADIUS);
+var redCircle = new Circle(RADIUS);
+
+/*This programs makes two balls collide when the left mouse is clicked.*/
+
+//This function sets the blue ball and red ball in their starting position
+// and get moved when mouse is clicked.//
+
+function start(){
+    
+    blueCircle.setPosition(50,  getHeight()/2);
+    blueCircle.setColor(Color.blue);
+    add(blueCircle);
+    
+    
+    redCircle.setPosition(getWidth()/2,  getHeight()/2);
+    redCircle.setColor(Color.red);
+    add(redCircle);
+    
+    mouseClickMethod(clicked);
+}
+
+
+/*Pre-condition: both balls are in one place*/
+/*Post-condition: both the blue and red ball move out of frame*/
+//This function moves both balls//
+
+function clicked(e){
+    if(stop){
+        setTimer(md,DELAY);
+        stop = false;
+    } else{
+        stopTimer();
+        stop = true;
+    }
+}
+
+//This function move the blue ball and later move the read ball when collided//
+function md(){
+    if(blueCircle.getX() >= (redCircle.getX()-RADIUS-RADIUS)){
+        touch = true;
+    }
+    if(touch){
+        blueCircle.move(DX_BLUE, 0);
+        redCircle.move(DX_RED, 0);
+    }else{
+        blueCircle.move(DX_BLUE, 0);
+
+    }
+}
