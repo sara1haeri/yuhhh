@@ -1,0 +1,33 @@
+// This program draws a target that follows the mouse 
+//and draws a red dot when mouse is clicked
+ var hLine = new Line (0, 0, 0, 0);
+ var vLine = new Line (0, 0, 0, 0);
+ 
+function start(){
+	mouseClickMethod(draw);
+	mouseMoveMethod(grid);
+}
+
+//draws red dot when mouse is clicked on
+function draw(e){
+    var dot = new Circle(10);
+    dot.setPosition(e.getX(), e.getY());
+    dot.setColor(Color.red);
+    add(dot);
+}
+
+// draws the grid which is following mouse
+function grid(e){
+   
+   
+    add(hLine);
+    
+   
+
+    add(vLine);
+    
+    hLine.setPosition(0, e.getY());
+    hLine.setEndpoint(getWidth(), e.getY());
+    vLine.setPosition(e.getX(), 0);
+    vLine.setEndpoint(e.getX(), getHeight());
+}
