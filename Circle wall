@@ -1,0 +1,30 @@
+// Constants
+var RADIUS = 20;
+var DELAY = 40;
+var mark = 0;
+var x_pos = 20;
+var y_pos = 20;
+// Define your global variables here
+
+//This program prints out an alternating pattern of red and black 
+// balls which starts in the top left corner
+function start(){
+   setTimer(circles, DELAY);
+}
+function circles(){
+    var circle = new Circle(RADIUS);
+    circle.setPosition(x_pos, y_pos);
+    if(mark % 2 == 0){
+        circle.setColor(Color.red);
+    }
+    mark++;
+    add(circle);
+    x_pos += 2*RADIUS;
+    if(x_pos > getWidth()){
+        x_pos = RADIUS;
+        y_pos += 2*RADIUS;
+    }
+    if(y_pos > getHeight()){
+        stopTimer(circles);
+    }
+}
