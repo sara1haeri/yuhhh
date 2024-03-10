@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Practice with Positions</title>
+        <link rel="stylesheet" href="style.css">
+    </head>
+
+    <body>
+        <div id = "circle"></div>
+        <div id = "square"></div>
+        <div id = "triangle"></div>
+    </body>
+    <script>
+        var circle = document.getElementById("circle");
+        var square = document.getElementById("square");
+        var triangle = document.getElementById("triangle");
+        
+        square.style.position = "relative";
+        square.style.left = "250px";
+        square.style.top = "500px";
+        square.style.backgroundColor = "red";
+        
+        circle.style.position = "relative";
+        circle.style.left = "250px";
+        circle.style.top = "500px";
+        circle.style.backgroundColor = "green";
+        circle.style.borderRadius = "50%";
+        
+        triangle.style.position = "relative";
+        triangle.style.left = "250px";
+        triangle.style.top = "500px";
+        triangle.style.borderLeft = "25px solid transparent";
+        triangle.style.borderRight = "25px solid transparent";
+        triangle.style.borderBottom = "50px solid blue";
+        
+        function position(){
+            var windowWidth = window.innerWidth;
+            var windowHeight = window.innerHeight;
+        }
+    </script>
+</html>
