@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<style>
+		    #number{
+    		    height: 75px;
+    		    width: 75px;
+    		    font-size: 45px;
+    		    font-weight: bold;
+    		    margin: 10px;
+    		    margin-left: 70px;
+    		    text-align:center;
+                line-height:75px;
+            }
+		</style>
+	</head>
+
+	<body>
+		<h3>Lotto Number Generator</h3>
+		<button id = generate onclick = "start()">Click here to start!</button>
+		<button id = stop onclick = "stop()">Click here to stop!</button>
+		<div id = number></div>
+		
+		<script>
+		var timer;
+		
+		function start(){
+		    var num = document.getElementById("number");
+		    num.style.display = 'block';
+		    timer = setInterval(random);
+		}
+		function stop(){
+		    clearInterval(timer);
+		}
+		function random(){
+		    var num = document.getElementById("number");
+		    num.innerHTML = Math.floor(Math.random()*10);
+		}
+		</script>
+	</body>
+</html>
