@@ -1,0 +1,46 @@
+HTML:
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Farmers' Market</title>
+        <link rel="stylesheet" type="text/css" href="styles.css">
+    </head>
+
+    <body>
+       <h1>Valley Farmers' Market</h1>
+       <h2>Our Products</h2>
+       <ul>
+           <li>Vegetables</li>
+           <li>Fruit</li>
+           <li>Breads</li>
+           <li>Berries</li>
+           <li>Pasta</li>
+           <li>Salsa and Sauces</li>
+           <li>Ready to eat food</li>
+       </ul>
+    </body>
+</html>
+
+
+CSS:
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Farmers' Market</title>
+        <link rel="stylesheet" type="text/css" href="styles.css">
+    </head>
+
+    <body>
+       <h1>Valley Farmers' Market</h1>
+       <h2>Our Products</h2>
+       <ul>
+           <li>Vegetables</li>
+           <li>Fruit</li>
+           <li>Breads</li>
+           <li>Berries</li>
+           <li>Pasta</li>
+           <li>Salsa and Sauces</li>
+           <li>Ready to eat food</li>
+       </ul>
+    </body>
+</html>
