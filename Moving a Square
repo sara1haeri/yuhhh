@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<style>
+		    html,body{
+		        height:98%;   
+		    }
+		    #container{
+		        display:flex;
+		        justify-content:center;
+		        align-items:center;
+		        height:100%;
+		        position:relative;
+		    }
+		    
+		    #square
+		    {
+		        height: 100px;
+		        width:100px;
+		        border: 1px solid black;
+		        background-color: green;
+		        position:absolute;
+		       
+		    }
+		</style>
+	</head>
+
+	<body>
+		<div id =container>
+		    <div id = square tabindex="0">
+		    </div>
+		</div>
+		
+		<script>
+		    var square = document.getElementById("square");
+		    
+		    square.addEventListener("keydown", movement);
+		    square.addEventListener("click", click);
+		    
+		    function click(){
+		        square.focus();
+		    }
+		    
+		    function movement(event){
+		        var move = 5;
+		        var style = window.getComputedStyle(square);
+		        var left = parseInt(style.left)||0;
+		        var top = parseInt(style.top)||0;
+		        
+		        if(event.key == "ArrowUp"){
+		            square.style.top = (top-move) + "px";
+		        }else if(event.key == "ArrowLeft"){
+		            square.style.left = (left-move) + "px";
+		        }else if(event.key == "ArrowDown"){
+		            square.style.top = (top+move) + "px";
+		        }else if(event.key == "ArrowRight"){
+		            square.style.left = (left+move) + "px";
+		        }
+		    }
+		</script>
+	</body>
+</html>
