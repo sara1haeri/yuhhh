@@ -1,0 +1,17 @@
+var BALL_RADIUS = 30;
+var circle = new Circle(BALL_RADIUS); 
+var line = new Line(0,0,0,0);
+
+function start() {
+	mouseMoveMethod(leash);
+}
+
+function leash(e){
+    line.setPosition(getWidth()/2, getHeight()/2);
+    line.setEndpoint(e.getX(), e.getY());
+    add(line);
+    
+    add(circle);
+    circle.setPosition(e.getX(), e.getY());
+    circle.setColor(Color.yellow);
+}
