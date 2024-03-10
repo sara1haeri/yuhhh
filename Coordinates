@@ -1,0 +1,14 @@
+/* This program displays the x and y
+ * coordinates in a label on the screen
+ * and updates when the mouse moves */
+var pos = new Text("", "16pt Arial");
+
+function start(){
+	mouseMoveMethod(position);
+}
+
+function position(e){
+    pos.setText("(" + e.getX() + ", " + e.getY() + ")");
+    pos.setPosition(10,25);
+    add(pos);
+}
