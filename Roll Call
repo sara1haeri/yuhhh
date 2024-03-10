@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+	<body>
+		<div id = "class-window">
+		    <h2> Student Class List</h2>
+		    <ul id = "class-list">
+		        <li>Karel the Dog</li>
+		        <li>Tracy the Turtle</li>
+		        <li>Jeremy the Human</li>
+		    </ul>
+		</div>
+		<script>
+		     var title = document.createElement("h4");
+		     title.innerHTML = "CodeHS class:";
+		     
+		     var classWindow = document.getElementById("class-window")
+		     var list = document.getElementById("class-list");
+		     classWindow.insertBefore(title, list);
+		     
+		     var classList = document.getElementById("class-list");
+		     var name2 = document.createElement("li");
+		     name2.innerHTML = "Sara the Human";
+		     classList.appendChild(name2);
+		   
+		</script>
+	</body>
+</html>
