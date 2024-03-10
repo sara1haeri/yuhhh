@@ -1,0 +1,29 @@
+// Constants
+var WIDTH = 50;
+var HEIGHT = 20;
+var DELAY = 50;
+var x_pos = 0;
+var y_pos = 460;
+var mark = 0;
+
+//This program prints out bricks of random shades of red that
+//starts from the bottom left corner
+function start() {
+    setTimer(bricks, DELAY);
+}
+function bricks(){
+    var brick = new Rectangle(WIDTH, HEIGHT);
+    brick.setPosition(x_pos, y_pos);
+    brick.setColor(Color.randomRed());
+    
+    mark++;
+    add(brick);
+    x_pos += WIDTH;
+    if(x_pos > getWidth()){
+        x_pos = 0;
+        y_pos -= HEIGHT;
+    }
+    if(y_pos > getHeight()){
+        stopTimer(bricks);
+    }
+}
