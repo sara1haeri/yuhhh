@@ -1,0 +1,16 @@
+// The start function is where information is input
+function start() {
+    circle(3, 20, 100, 200);
+    circle(20, 6, 400, 200);
+}
+
+// Determines how many circles will appear on the screen 
+// and in what position based on the inputed information
+function circle(amount, radius, x_pos, y_pos){
+    for(var i = 0; i < amount; i++){
+        var circles = new Circle(Randomizer.nextInt(radius));
+        circles.setPosition(Randomizer.nextInt(x_pos), Randomizer.nextInt(y_pos));
+        circles.setColor(Randomizer.nextColor());
+        add(circles)
+    }
+}
