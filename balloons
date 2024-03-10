@@ -1,0 +1,29 @@
+// This program draws some balloons
+
+var MIN_RADIUS = 20;
+var MAX_RADIUS = 40;
+var NUM_BALLOONS = 25;
+var centerX = getWidth()/2;
+var centerY = getHeight()/1.5;
+
+// The start funciton which decides how many ballons print on the screen
+function start() {
+    for(var i = 0; i < NUM_BALLOONS; i++){
+        var x2 = Randomizer.nextInt(40,getWidth()-40);
+        var y2 = Randomizer.nextInt(40, centerY-100);
+        var radius = Randomizer.nextInt(MIN_RADIUS, MAX_RADIUS)
+        balloons(x2, y2, radius);
+    }
+}
+
+// This function draws the balloons in random colors and lines that meet 
+// at one poin
+function balloons(x2, y2, radius){
+    var string = new Line (centerX, centerY, x2, y2);
+    string.setColor(Color.black);
+    add(string);
+	var balloon = new Circle (radius);
+	balloon.setColor(Randomizer.nextColor());
+	balloon.setPosition(x2, y2);
+	add(balloon);
+}
