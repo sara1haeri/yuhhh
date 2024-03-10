@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<style>
+		    html,body{
+		        display:flex;
+		        flex-wrap: wrap;
+		        height:100%;
+		        width:100%;
+		        padding-left:2%;
+		        padding-right:2%;
+		    }
+		    div{
+		        height:10%;
+		        width:9%;
+		        border: 1px solid black;
+		    }
+		</style>
+	</head>
+	<body>
+		<script>
+		    for(var i = 0; i <100; i++){
+		        var quilt = document.createElement("div");
+		        quilt.addEventListener("mouseover", paint);
+		        document.body.appendChild(quilt);
+		    }
+		    
+		    function paint(){
+		        var color = Math.floor(Math.random()*4)+1;
+		        if(color == 1){
+		            this.style.backgroundColor = "purple";
+		        }else if(color == 2){
+		            this.style.backgroundColor = "blue";
+		        }else if(color == 3){
+		            this.style.backgroundColor = "lightblue";
+		        }else{
+		            this.style.backgroundColor = "green";
+		        }
+		    }
+		</script>
+	</body>
+</html>
