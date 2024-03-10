@@ -1,0 +1,14 @@
+//Global variables are placed here
+var RADIUS = 100;
+var circle = new Circle(RADIUS);
+
+//This program prints random colored circles at random
+// coordinates across the screen
+function start(){
+	add(circle);
+	setTimer(moveCircle,100);
+}
+function moveCircle(){
+    circle.setColor(Randomizer.nextColor());
+    circle.setPosition(Randomizer.nextInt(100, 200), Randomizer.nextInt(200, 400));
+}
