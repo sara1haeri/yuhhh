@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>Create a Flag</title>
+		<style>
+		    html, body{
+		        display: flex;
+		        flex-direction: column;
+		        align-items: stretch;
+		        height: 100%;
+		    }
+		    div{
+		        flex: 1;
+		    }
+		</style>
+	</head>
+
+	<body>
+		<div id = "color-one">
+		    
+		</div>
+		<div id ="color-two">
+		    
+		</div>
+		<div id = "color-three">
+		    
+		</div>
+		<script>
+		   
+		   var color1 = prompt("Pick the first color for your flag:");
+		   colorOne = document.getElementById("color-one");
+		   colorOne.setAttribute("style", "background-color:" + color1);
+		        
+		   var color2 = prompt("Now the second:"); 
+		   colorTwo = document.getElementById("color-two");
+		   colorTwo.setAttribute("style", "background-color:" + color2);
+		   
+		   var color3 = prompt("Now the third:");
+		   colorThree = document.getElementById("color-three");
+		   colorThree.setAttribute("style", "background-color:" + color3);
+		    
+		</script>
+	</body>
+</html>
