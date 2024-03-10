@@ -1,0 +1,15 @@
+<!DOCTYPE html>
+<html>
+	<body>
+		<script>
+		    function announcement(text){
+		        var text1 = document.createElement("h2");
+		        text1.innerHTML = text;
+		        document.body.appendChild(text1);
+		    }
+		    
+		    announcement("This is my announcement.");
+		    announcement("Very interesting.");
+		</script>
+	</body>
+</html>
