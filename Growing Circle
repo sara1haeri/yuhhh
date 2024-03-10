@@ -1,0 +1,26 @@
+/* Constants */
+var START_RADIUS = 1;
+var INCREMENT = 1;
+var CHANGE_COLORS_AT = 10;
+var circle = new Circle(START_RADIUS);
+ 
+//This program prints a growing ball from the center which changes colors
+// everytime the circle grows by 10
+function start(){
+    var x = getWidth()/2;
+    var y = getHeight()/2;
+    circle.setPosition(x, y);
+    add(circle);
+    setTimer(growingCircle, 50);
+}
+function growingCircle(){
+    var circleSize = circle.getRadius();
+    circleSize = circleSize + INCREMENT;
+    circle.setRadius(circleSize);
+    if(circleSize % 10 == 1){
+        circle.setColor(Randomizer.nextColor());
+    }
+    if(circleSize == getWidth()/2){
+        stopTimer(growingCircle);
+    }
+}
