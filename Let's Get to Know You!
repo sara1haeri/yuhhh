@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>Introductions</title>
+	</head>
+
+	<body>
+		<h3 id="welcome"></h3>
+		<h3 id="snack"></h3>
+		<h3 id="tv-show"></h3>
+		
+		<script>
+		    var name = prompt("What is your name?");
+		    var welcome = document.getElementById("welcome");
+		    welcome.innerHTML = "This is " + name;
+		    
+		    var food = prompt("What is your favorite snack?");
+		    var snack = document.getElementById("snack");
+		    snack.innerHTML = name + " likes eating  " + food;
+		    
+		    var show = prompt("What is your favourite TV show?");
+		    var tvShow = document.getElementById("tv-show");
+		    tvShow.innerHTML = name + " eats " + food + " while watching their favourite show, " + show;
+		</script>
+	</body>
+</html>
