@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<style>
+		    html,body{
+		       height:98%;
+		       width:99%;
+		    }
+		    #container{
+		        display:flex;
+		        flex-wrap: wrap;
+		        height:100%;
+		    }
+		    div div{
+		        width:32%;
+		        border: 1px solid black;
+		    }
+		</style>
+	</head>
+
+	<body>
+    	<div id = container>
+            <div></div>
+            <div id = top></div>
+            <div></div>
+            <div id = left></div>
+            <div></div>
+            <div id = right></div>
+            <div></div>
+            <div id = bottom></div>
+            <div></div>
+        </div>
+        
+        <script>
+            function colorDown(event){
+                if(event.key == "ArrowUp"){
+                    var light = document.getElementById("top");
+                    light.style.backgroundColor = "yellow";
+                }
+                if(event.key == "ArrowDown"){
+                    var light = document.getElementById("bottom");
+                    light.style.backgroundColor = "yellow";
+                }
+                if(event.key == "ArrowLeft"){
+                    var light = document.getElementById("left");
+                    light.style.backgroundColor = "yellow";
+                }
+                if(event.key == "ArrowRight"){
+                    var light = document.getElementById("right");
+                    light.style.backgroundColor = "yellow";
+                }
+            }
+            document.body.addEventListener("keydown", colorDown);
+        </script>
+	</body>
+</html>
